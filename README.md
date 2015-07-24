@@ -37,3 +37,8 @@ $ make install
 
 run `~/bin/ffmpeg`
 
+## Video capturing
+
+```sh
+$ ffmpeg -i rtsp://admin:password@ip:554/Streaming/Channels/1 -c copy -map 0 -f segment -segment_time 600 -segment_format mkv "videos/out%03d.mkv"
+```
